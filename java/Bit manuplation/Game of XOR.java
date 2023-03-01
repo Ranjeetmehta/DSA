@@ -8,7 +8,7 @@ class Solution
 			   int PossibleSp=i+1;
 			   int PossibleEp=n-i;
 			   int freq=(PossibleSp*PossibleEp);
-			    if((freq & 1) ==0) ans ^= arr[i]; 
+			    if((freq & 1) ==1) ans ^= arr[i]; 
 		   }
 		   return ans;
     }

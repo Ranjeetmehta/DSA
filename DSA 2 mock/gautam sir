@@ -1,0 +1,75 @@
+1)Given a linked list of N nodes such that it may contain a loop. A loop here means that the last node of the link list is connected to the node at position X(1-based index). If the link list does not have any loop, X=0. Remove the loop from the linked list, if it is present, i.e. unlink the last node which is forming the loop.
+Example 1:
+Input:
+N = 3
+value[] = {1,3,4}
+X = 2
+Output: 1
+Explanation: The link list looks like
+1 -> 3 -> 4
+ 	^	|
+ 	|____|	
+A loop is present. If you remove it
+successfully, the answer will be 1.
+
+
+Example 2:
+Input:
+N = 4
+value[] = {1,8,3,4}
+X = 0
+Output: 1
+Explanation: The Linked list does not
+contains any loop.
+
+
+Example 3:
+Input:
+N = 4
+value[] = {1,2,3,4}
+X = 1
+Output: 1
+Explanation: The link list looks like
+1 -> 2 -> 3 -> 4
+ 	|_________|
+A loop is present.
+If you remove it successfully,
+the answer will be 1.
+ 
+
+
+public static void removeLoop(Node head)
+{
+}
+2)
+Given an unsorted linked list of N nodes. The task is to remove duplicate elements from this unsorted Linked List. When a value appears in multiple nodes, the node which appeared first should be kept, all others duplicates are to be removed.
+Your Task:
+You have to complete the method removeDuplicates() which takes 1 argument: the head of the linked list.  Your function should return a pointer to a linked list with no duplicate element.
+Example 1:
+Input:
+N = 4
+value[] = {5,2,2,4}
+Output: 5 2 4
+Explanation:Given linked list elements are
+5->2->2->4, in which 2 is repeated only.
+So, we will delete the extra repeated
+elements 2 from the linked list and the
+resultant linked list will contain 5->2->4
+Example 2:
+Input:
+N = 5
+value[] = {2,2,2,2,2}
+Output: 2
+Explanation:Given linked list elements are
+2->2->2->2->2, in which 2 is repeated. So,
+we will delete the extra repeated elements
+2 from the linked list and the resultant
+linked list will contain only 2.
+
+
+
+public Node removeDuplicates(Node head) 
+    {
+         // Your code here
+    }
+

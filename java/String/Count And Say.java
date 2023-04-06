@@ -16,25 +16,25 @@ class Main{
 class Solution
 {
     public String countandsay(int n) {
-        if(n==1) return "1";
-		if(n==2) return "11";
-		String str="11";
-		for(int i=3;i<=n;i++){
-			str+='$';
-			int count=1;
-			String temp=" ";
-			char []arr=str.toCharArray();
-			for(int j=1;j<str.length();j++){
-				if(arr[j]!=arr[j-1]){
-					temp+=count+0;
-					temp+=arr[j-1];
-					count=1;
-				}
-				else count++;
-			}
-			str=temp;
-		}
-		return str;
+        //Write code here
+		ArrayList<String> str=new ArrayList<>(n+1);
+		str.add("1");
+		for(int i=2;i<=n;i++){
+			String prev=str.get(i-1-1);
+			String curr="";
+			for(int j=0;j<prev.length();j++){
+				 int count = 1;
+        while (j + 1 < prev.length() && prev.charAt(j) == prev.charAt(j + 1)) {
+          count++;
+          j++;
+        }
+        curr += Integer.toString(count) + prev.charAt(j);
+      }
+    str.add(curr);
+    }
+    return str.get(n - 1);
+	}
+			
 		
     }   
-}
+
